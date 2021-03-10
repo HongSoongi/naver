@@ -4,15 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>네이버 로그인</title> <!-- 제목-->
+  <title>네이버 로그인</title>
 </head>
 <body>
   <header class="header">
     <h1 class="brand">
-      <a href="https://www.naver.com/"> <!-- 연결 링크-->
-        <img src="./images/logo.png"  <!-- 최신 그림-->
-        srcset="./images/logo.svg"  <!-- 대체 그림 -->
-        alt="Naver"> <!-- 대체 텍스트 -->
+      <a href="https://www.naver.com/"> 
+        <img src="./images/logo.png" srcset="./images/logo.svg" alt="Naver"> 
       </a>
     </h1>
   </header>
@@ -32,6 +30,23 @@
           <span class="error-message">비밀번호를 입력해주세요.</span>
         </div>
      <!-- shift+alt+방향키 down -->
+        <div class="keep-login">
+          <input type="checkbox" id="keepLogin">
+          <label for="keepLogin" class="checkbox-toggle">
+            <span class="checkbox-toggle-bg"></span>
+            <span class="checkbox-toggle-text">로그인 상태 유지</span>
+          </label>
+        </div>
+        <div class="ip-security">
+          <a href="#" class="go-ip-security" target="_blank" rel="noopener noreferrer">IP 보안</a>
+          <span class="ip-security-toggle">
+            <input type="checkbox" class="checkbox" id="ipSecurity">
+            <label for="ipSecurity" class="ip-security-state is-off">OFF</label>
+          </span>
+        </div>
+        <div class="button-login">
+          <button type="submit" class="button button-primary">로그인</button>
+        </div>
       </fieldset>
     </form>
   </main>
