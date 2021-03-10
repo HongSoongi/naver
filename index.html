@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>네이버 로그인</title>
+  <title>네이버 로그인</title> <!-- 제목-->
 </head>
 <body>
   <header class="header">
     <h1 class="brand">
-      <a href="https://www.naver.com/"> 
+      <a href="https://www.naver.com/"> <!-- 연결 링크-->
         <img src="./images/logo.png"  <!-- 최신 그림-->
         srcset="./images/logo.svg"  <!-- 대체 그림 -->
         alt="Naver"> <!-- 대체 텍스트 -->
@@ -17,9 +17,30 @@
     </h1>
   </header>
   <main class="main">
-
+    <h2 class = "a11y-hidden">로그인</h2> <!-- a11y = accessibility의 맨 앞a와 맨 뒤y를 줄인 축약어 // 접근성 관련 컴포넌트 // hidden은 css 단계에서 눈에 안 보이게 숨길 정보-->
+    <form action="https://formspree.io/seulbinim@gmail.com" method="POST">
+      <fieldset>
+        <legend class = "a11y-hidden">회원 로그인 폼</legend>
+        <div class="user-id">
+          <label for="userID" class="a11y-hidden">아이디</label>
+          <input type="email" class="input input-normal" id="userID" required placeholder="아이디">
+          <span class="error-message">아이디를 입력해주세요.</span>
+        </div>
+        <div class="user-pw">
+          <label for="userPW" class="a11y-hidden">비밀번호</label>
+          <input type="password" class="input input-normal" id="userPW" required placeholder="비밀번호">
+          <span class="error-message">비밀번호를 입력해주세요.</span>
+        </div>
+     <!-- shift+alt+방향키 down -->
+      </fieldset>
+    </form>
   </main>
 </body>
 </html>
 
 
+
+
+<!-- 예시 -->
+<!-- readable-hidden // 읽을수는 있지만 보이지 않음 -->
+<!-- screenoff //스크린 상 안보임//대한항공 네이밍 -->
