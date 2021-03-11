@@ -86,7 +86,7 @@ img{
 /* 모바일 이상 크기 */
 @media screen and (min-width: 769px){
 
-  brand{
+  .brand{
     padding: 106px 0 53px;
   }
 
