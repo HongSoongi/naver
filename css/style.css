@@ -159,7 +159,7 @@ img{
   }
 
   .ip-security{
-    display: block;
+    display: flex;
     /* text-align: right; */
     justify-content: flex-end;
   }
