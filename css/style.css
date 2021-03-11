@@ -68,6 +68,14 @@ img{
   height: auto;
 }
 
+a{
+  /* inherit = 상속을 우선순위로 */
+  color: inherit;
+
+  /* 밑줄 지우기 */
+  text-decoration: none;
+}
+
 /* 로고 */
 .brand{
   display: flex;
@@ -117,6 +125,7 @@ img{
   order: 1;
   display: none;
   margin-bottom: 14px;
+  color: red;
 }
 
 .button-login{
@@ -162,6 +171,12 @@ img{
   background: #03c75a;
   color: #fff;
 }
+
+/* .링크 텍스트 -a */
+.ip-security a{
+  color: #333;
+}
+
 
 /* 위에는 모바일 이하 적용 */
 
