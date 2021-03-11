@@ -30,7 +30,7 @@
 }
 
 body{
-  background-color: #ffc;
+  background-color: #fff;
   
   /* HTML은 블럭들의 모임
     블럭에 user agent stylesheet라고 하는, 기본으로 지정해주는 부분이 있음
@@ -61,6 +61,40 @@ body *{
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }
 
+img{
+  vertical-align: middle;
+  max-width: 100px;
+  height: auto;
+}
 
+/* 로고 */
+.brand{
+  display: flex;
+  justify-content: center;
+  padding: 70px 0 35px;
+}
 
+.brand a{
+  display: block;
+  width: 51.5625%;
+  min-width: 165px;
+  max-width: 280px;
+  /* height: 35px; */
+}
+/* 위에는 모바일 이하 적용 */
+
+/* 모바일 이상 크기 */
+@media screen and (min-width: 769px){
+
+  brand{
+    padding: 106px 0 53px;
+  }
+
+  .brand a{
+    width: 230px;
+    height: 44px;
+  }  
+}
+
+/* 데스크나 태블릿은 고정 레이아웃, 모바일은 유동 레이아웃 */
 /* shift+ctrl+K : 커서가 있는 영역 줄 내용 전체 지움*/
