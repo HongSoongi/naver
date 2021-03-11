@@ -1,8 +1,66 @@
-body{
-  background-color: #ffc;
-}
+
+/* 스포카한산스를 웹 폰트로 설정
+   font-weight로 글꼴 바꿈
+   CDN : Content Delivery Network 서비스
+
+   성능 관점에서는 HTML에 넣는 것이 더 좋지만 현재는 import 과정으로 씁니다
+*/
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
 .a11y-hidden {
-  background: blue;
-  color: aliceblue;
+  /*  */
+  position: absolute;
+
+  /*  display: none; */
+  
+  /*  접근성 문제 
+  top: -9999px;
+  */ 
+
+  /* 최소한의 크기 */
+  width: 1px;
+  height: 1px;
+  
+  /* 내용이 넘치면 잘라지고 보여지지 않음, 자른 부분은 사라지지 않음 */
+  overflow: hidden;
+
+  /* 보여주고 싶은 영역 xyz좌표 */
+  clip-path: polygon(0 0, 0 0, 0 0);
+  
 }
+
+body{
+  background-color: #ffc;
+  
+  /* HTML은 블럭들의 모임
+    블럭에 user agent stylesheet라고 하는, 기본으로 지정해주는 부분이 있음
+    margin은 블럭 주변에 기본으로 잡아주는 여백
+    내가 만들 디자인에 필요없는 여백은 내가 지정해서 없앨 수 있음*/
+  margin: 0;
+}
+
+body *{
+  margin: 0;
+  padding: 0;
+  
+  /* 테두리 굵기 */
+  border: 0;
+
+  /* 내가 정하지 않으면 기본 16px user agent stylesheet
+     상속을 통해 내가 지정한 body 안의 모든 자식들이 함께 지정됨
+
+     app 기본단위 - px,pt
+     web 기본단위- em, %, .... 
+     1em = 100%
+  */
+
+  font-size: 100%;
+  font-weight: 400; 
+  /* normal = regular or 400 */
+
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+
+
+/* shift+ctrl+K : 커서가 있는 영역 줄 내용 전체 지움*/
