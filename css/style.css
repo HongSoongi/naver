@@ -40,6 +40,7 @@ body{
 }
 
 body *{
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   
@@ -81,6 +82,59 @@ img{
   max-width: 280px;
   /* height: 35px; */
 }
+
+/* 로그인 폼 */
+.login-form{
+  padding: 0 15px;
+}
+
+.login-form fieldset{
+  background: pink;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.user-id{
+  background: salmon;
+  width: 100%;
+}
+
+.user-pw{
+  background: blueviolet;
+  width: 100%;
+}
+
+.keep-login{
+  background: lightgreen;
+  width: 50%;
+  order: 1;
+}
+
+.ip-security{
+  background: aqua;
+  width: 50%;
+  order: 1;
+  display: none;
+}
+
+.button-login{
+  background: yellow;
+  width: 100%;
+}
+
+/* 입력서식 INPUT */
+.input{
+  width: 100%;
+  padding: 14px 14px 13px 14px;
+}
+
+.input-normal{
+  /* 선 굵기, 모양, 색상 */
+  border: 1px solid #dadada;
+  color: #999;
+}
+
 /* 위에는 모바일 이하 적용 */
 
 /* 모바일 이상 크기 */
@@ -94,6 +148,21 @@ img{
     width: 230px;
     height: 44px;
   }  
+
+  .login-form{
+    display: flex;
+    justify-content: center;
+  }
+
+  .login-form fieldset{
+    width: 460px;
+  }
+
+  .ip-security{
+    display: block;
+    /* text-align: right; */
+    justify-content: flex-end;
+  }
 }
 
 /* 데스크나 태블릿은 고정 레이아웃, 모바일은 유동 레이아웃 */
