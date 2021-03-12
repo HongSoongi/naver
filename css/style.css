@@ -113,7 +113,6 @@ a{
 }
 
 .keep-login{
-  background: lightgreen;
   width: 50%;
   order: 1;
   margin-bottom: 14px;
@@ -175,16 +174,17 @@ a{
   color: #333;
 }
 
-.ip-security-toggle{
+.ip-security-toggle, .keep-login{
   position: relative;
 }
 
-.ip-security-toggle .checkbox{
+.ip-security-toggle .checkbox, .keep-login .checkbox{
   position: absolute;
   top: 0;
   left: 0;
   width: 1px;
   height: 1px;
+  clip-path: inset(50%);
 }
 
 .ip-security-state{
@@ -202,10 +202,49 @@ a{
   color: #03c75a;
 }
 
+/* 로그인 상태 유지 */
+.keep-login label{
+  display: flex;
+
+  /* 임시 상자 크기 */
+  /* height: 100px; */
+
+  /* 세로 정렬 */
+  align-items: center;
+
+  /* 가로 정렬 */
+  /* justify-content: center; */
+
+  cursor: pointer;
+
+}
+
+.keep-login .checkbox-toggle-bg{
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+  /* background-color: transparent;
+  background-image: url("../images/unchecked.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover; */
+  background: url("../images/unchecked.svg") no-repeat 50% 50% / cover;
+}
+
+/* .keep-login의 checkbox가 check되면 +(결과) 같은 자식 label의 .checkbox-toggle-bg {안의 이미지가 바뀜} */
+.keep-login .checkbox:checked + label .checkbox-toggle-bg{
+  background-image: url(../images/checked.svg);
+}
+
 
 /* 위에는 모바일 이하 적용 */
 
+
+
+
+
 /* 모바일 이상 크기 */
+
 @media screen and (min-width: 769px){
 
   .brand{
