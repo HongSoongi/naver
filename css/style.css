@@ -120,12 +120,10 @@ a{
 }
 
 .ip-security{
-  background: aqua;
   width: 50%;
   order: 1;
   display: none;
   margin-bottom: 14px;
-  color: red;
 }
 
 .button-login{
@@ -175,6 +173,33 @@ a{
 /* .링크 텍스트 -a */
 .ip-security a{
   color: #333;
+}
+
+.ip-security-toggle{
+  position: relative;
+}
+
+.ip-security-toggle .checkbox{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.ip-security-state{
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+.ip-security-state,
+.ip-security-state.is-off{
+  color: #999;
+}
+
+.ip-security-state.is-on, 
+.ip-security-toggle .checkbox:checked + .ip-security-state{
+  color: #03c75a;
 }
 
 
